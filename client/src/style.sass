@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One&display=swap')
+
+$bg: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/38816/image-from-rawpixel-id-2210775-jpeg.jpg"
+$form-bg: #f8f4e5
+$form-shadow: #ffa580
+$form-secondary-button: #FFD3B0
+$form-primary-highlight: #95a4ff
+$form-secondary-highlight: #ffc8ff
+$font-size: 14pt
+$font-face: 'Fjalla One'
+$font-color: #2A293E
+
+*
+  margin: 0
+  padding: 0
+
+body
+  background: url($bg) center center no-repeat
+  background-size: cover
+  width: 100vw
+  height: 100vh
+  display: grid
+  align-items: center
+  justify-items: center
+
+h1 
+  text-align: center
+
+.contact-us
+  background: $form-bg
+  padding: 50px 100px
+  border: 2px solid black
+  box-shadow: 15px 15px 1px $form-shadow, 15px 15px 1px 2px black
+
+input
+  display: block
+  width: 100%
+  font-size: $font-size
+  line-height: $font-size * 2
+  font-family: $font-face
+  margin-bottom: $font-size
+  border: none
+  border-bottom: 5px solid black
+  background: $form-bg
+  min-width: 250px
+  padding-left: 5px
+  outline: none
+  color: black
+  
+  &:focus
+    border-bottom: 5px solid $form-shadow
+
+
+.buttons
+  display: flex
+  gap: 20px
+  margin-top: 50px
+  
+button
+  display: block
+  margin: 0 auto
+  line-height: $font-size * 2
+  padding: 0 20px
+  background: $form-shadow
+  letter-spacing: 2px
+  transition: .2s all ease-in-out
+  outline: none
+  border: 1px solid black
+  box-shadow: 3px 3px 1px 1px $form-primary-highlight, 3px 3px 1px 2px black
+  cursor: pointer
+  
+  &.new-request
+    background: $form-secondary-button
+
+  &:hover
+    background: black
+    color: white
+    border: 1px solid black
+  
+::selection 
+  background: $form-secondary-highlight
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus
+  border-bottom: 5px solid $form-primary-highlight
+  -webkit-text-fill-color: $font-color
+  -webkit-box-shadow: 0 0 0px 1000px $form-bg inset
+  transition: background-color 5000s ease-in-out 0s
+
+.error-text
+  color: red
+  text-align: center
+  margin-top: 20px  
+
+pre
+  margin-top: 20px
+  overflow-y: auto
+  height: 300px

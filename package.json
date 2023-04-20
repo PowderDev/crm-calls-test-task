@@ -1,0 +1,14 @@
+{
+  "name": "tt",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "concurrently \"yarn --cwd client dev\" \"yarn --cwd server dev\"",
+    "coInstall": "concurrently \"yarn --cwd client install\" \"yarn --cwd server install\"",
+    "start:prod": "node ./server/build/index.js"
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.1"
+  }
+}
