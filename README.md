@@ -1,6 +1,7 @@
 
 #### Live Demo - https://crm-calls-test-task-production.up.railway.app
 
+P.S. Placed client and server sides in the one repository for simplicity of deployment
 
 To start localy:
 ```
